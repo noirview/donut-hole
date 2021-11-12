@@ -20,6 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/', function () {
+    return response()->file(storage_path('swagger.json'));
+});
+
 Route::apiResources([
     'employees' => EmployeeController::class,
     'departments' => DepartmentController::class

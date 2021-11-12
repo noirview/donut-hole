@@ -1,0 +1,202 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Документация к тестовому проекту для управления отделами и сотрудниками",
+    "version": "1.0.0",
+    "title": "Departloyee",
+    "contact": {
+      "email": "stepurko.anton@gmail.com"
+    }
+  },
+  "basePath": "/api",
+  "paths": {
+    "/employees": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "summary": "Список всех сотрудников",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "type": "integer",
+            "description": "Номер страницы"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Employee"
+        ],
+        "summary": "Запись нового сотрудника",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/employees/{employee_id}": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "summary": "Сотрудник по id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "employee_id",
+            "type": "integer",
+            "required": true,
+            "description": "id сотрудника"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Employee"
+        ],
+        "summary": "Редактировать данные сотрудника",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "employee_id",
+            "type": "integer",
+            "required": true,
+            "description": "id сотрудника"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Employee"
+        ],
+        "summary": "Удалить сотрудника по id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "employee_id",
+            "type": "integer",
+            "required": true,
+            "description": "id сотрудника"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/departments": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "summary": "Список всех сотрудников",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "type": "integer",
+            "description": "Номер страницы"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Department"
+        ],
+        "summary": "Запись нового сотрудника",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/departments/{department_id}": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "summary": "Сотрудник по id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "department_id",
+            "type": "integer",
+            "required": true,
+            "description": "id сотрудника"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Department"
+        ],
+        "summary": "Редактировать данные сотрудника",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "department_id",
+            "type": "integer",
+            "required": true,
+            "description": "id сотрудника"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Department"
+        ],
+        "summary": "Удалить сотрудника по id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "department_id",
+            "type": "integer",
+            "required": true,
+            "description": "id сотрудника"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  }
+}
