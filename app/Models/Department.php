@@ -13,6 +13,6 @@ class Department extends Model
 
     public function employees()
     {
-        $this->belongsToMany(Employee::class);
+        return $this->belongsToMany(Employee::class);
     }
 }
